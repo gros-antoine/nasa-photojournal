@@ -8,7 +8,7 @@
 
 include 'dbconnection.php';
 
-# Connection to the databse
+# Connection to the database
 $conn = connection();
 
 # Retrievial of the id and the publishing date of the associated image
