@@ -7,7 +7,7 @@
 
 include 'dbconnection.php';
 
-# Connection to the databse
+# Connection to the database
 $conn = connection();
 
 # Retrievial of the id
