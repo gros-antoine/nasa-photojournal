@@ -13,6 +13,7 @@ function connection() {
 	$port = "";
 		
 	$conn = mysqli_connect($serveur, $login, $mdp, $bd, $port);
+	
 	return $conn;
 }
 
