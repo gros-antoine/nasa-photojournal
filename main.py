@@ -246,7 +246,7 @@ for c in range(start, start+20):
 
     else:
         # Log
-        log.wrte('Rien trouvé pour id ' + num + '\n')
+        log.write('Rien trouvé pour id ' + num + '\n')
 
 #
 # Retrieving and formatting the information
