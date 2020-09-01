@@ -9,7 +9,7 @@ header("Content-type: application/json");
 
 include 'dbconnection.php';
 
-# Connection to the databse
+# Connection to the database
 $conn = connection();
 
 # Retrieval of 10 unprocessed images
