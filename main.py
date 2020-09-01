@@ -440,7 +440,7 @@ except:
     # Log
     log.write('Problème connexion\n')
 
-# Bypass du premier "popup"
+# Bypass of the first 'popup'
 try:
     
     cancel_button1 = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/section/main/div/div/div/button')))
@@ -452,7 +452,7 @@ except:
 
 time.sleep(3)
 
-# Bypass du deuxième "popup"
+# Bypass of the second 'popup'
 try:
     
     cancel_button2 = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[4]/div/div/div')))
@@ -469,7 +469,7 @@ except:
     # Log
     log.write('Problème deuxième bypass\n')
 
-# Upload de l'image
+# Image upload
 upload_button = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/section/nav[2]/div/div/div[2]/div/div/div[3]')))
 upload_button.click()
 
@@ -479,7 +479,7 @@ pyautogui.press('enter')
 
 time.sleep(3)
 
-# Expansion de l'image si possible
+# Expansion of the image if possible
 try:
 
     section = driver.find_element_by_xpath('/html/body/div[1]/section')
@@ -493,7 +493,7 @@ except:
     # Log
     log.write('Problème expansion image\n')
 
-# Finition de l'upload
+# Finishing the upload
 next_button = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/section/div[1]/header/div/div[2]/button')))
 next_button.click()
 
@@ -506,7 +506,7 @@ JS_ADD_TEXT_TO_INPUT = """
   elm.dispatchEvent(new Event('change'));
   """
 
-# Envoi de la description
+# Sending the description
 text_area.send_keys(desc[0])
 driver.execute_script(JS_ADD_TEXT_TO_INPUT, text_area, desc[1:-1])
 text_area.send_keys(desc[-1])
@@ -524,13 +524,13 @@ time.sleep(2)
 cursor.execute("UPDATE images SET published = %s WHERE id = %s", (1, int(c_id)))
 mydb.commit()
 
-# Déconnection de la base de données
+# Disconnection from the database
 mydb.close()
 
-# Fermeture de Chrome
+# Chrome closure
 driver.quit()
 
-# Suppression du fichier temporaire
+# Deleting the temporary file
 os.remove('/opt/bitnami/apache2/htdocs/temp/' + c_id + '.jpg')
 
 # Log
