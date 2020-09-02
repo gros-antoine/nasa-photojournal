@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3C55BD</color>
+    <color name="colorPrimaryDark">#2F43A5</color>
+    <color name="colorAccent">#2F43A5</color>
+    <color name="lvbackground">#e8e8e8</color>
+</resources>
