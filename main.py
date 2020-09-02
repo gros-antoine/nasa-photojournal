@@ -104,7 +104,7 @@ for c in range(start, start+20):
 
             texts = texts.replace("\n\n", "\n")
 
-    # Second text formatting 
+    # Second text formatting
     if texts == "":
 
         # The text is in a 'dd' element
@@ -284,7 +284,7 @@ def getEmoji(body):
     elif body == "Uranus":
         return uranus_em
     elif body == "Neptune":
-        return netpune_em
+        return neptune_em
     else:
         return default_em
 
@@ -335,6 +335,7 @@ if satelliteOf != "":
         
         desc += ("Satellite of: Our sun " + getEmoji(satelliteOf) + "\n")
         compt_emoji += 1
+        
     else:
 
         desc += ("Satellite of: " + satelliteOf + " " + getEmoji(satelliteOf)+ "\n")
@@ -368,8 +369,7 @@ if sub < 0:
     text = text[:sub]
     text = text + "[...]"
 
-desc += (text + "\n")
-desc += "\n"
+desc += (text + "\n\n")
 
 c_id = str(ide)
 
